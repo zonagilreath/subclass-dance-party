@@ -3,13 +3,12 @@ var Dancer = function(top, left, timeBetweenSteps){
   this.left = left;
   this.timeBetweenSteps = timeBetweenSteps;
   this.$node = $('<span class="dancer"></span>');
-  // this.step();
-  // this.setPosition();
+  this.step();
+  this.setPosition();
 }
 
 Dancer.prototype.step = function(){
-  setTimeout(this.step, this.timeBetweenSteps);
-  console.log(`step was called on ${this}`);
+  setTimeout(this.step.bind(this), this.timeBetweenSteps);
 }
 
 Dancer.prototype.setPosition = function(){
