@@ -29,5 +29,10 @@ $(document).ready(function() {
     );
     $('body').append(dancer.$node);
   });
+  
+  $('#line-up-button').on('click', function(){
+    lineEmUpBaby();
+    // console.log('event!');
+  });
 });
 

@@ -1,6 +1,5 @@
 var slidyDancer = function(top, left, timeBetweenSteps){
   Dancer.call(this, top, left, timeBetweenSteps);
-  // this.direction = 1;
 }
 
 slidyDancer.prototype = Object.create(Dancer.prototype);
@@ -12,9 +11,8 @@ slidyDancer.prototype.step = function(){
     'transition' : `transform ${this.timeBetweenSteps}ms`,
     'transform' :`translate(${getRandomScalar() * 90}px, ${getRandomScalar() * 90}px )`,
     'border-color' : 'blue',
+    'border-radius': '0',
     });
-  
-  // this.direction *= -1;
 }
 
 function getRandomScalar(){
