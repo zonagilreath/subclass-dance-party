@@ -23,12 +23,12 @@ $(document).ready(function() {
     // make a dancer with a random position
 
     var dancer = new dancerMakerFunction(
-      $("body").height() * Math.random(),
-      $("body").width() * Math.random(),
+      $('body').height() * Math.random(),
+      $('body').width() * Math.random(),
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
-    dancer.$node.on('mouseover', function(event){
+    dancer.$node.on('mouseover', function(event) {
       // console.log('event');
       // event.target.remove();
       let left = $(event.target).css('left');
@@ -47,11 +47,11 @@ $(document).ready(function() {
     });
   });
   
-  const lineEmUpBaby = function(){
+  const lineEmUpBaby = function() {
     $('.dancer').css({'left': '1px'});
-  }
+  };
   
-  $('#line-up-button').on('click', function(){
+  $('#line-up-button').on('click', function() {
     lineEmUpBaby();
   });
   
