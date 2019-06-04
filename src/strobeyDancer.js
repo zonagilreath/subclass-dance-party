@@ -2,11 +2,11 @@ var StrobeyDancer = function(top, left, timeBetweenSteps) {
   Dancer.call(this, top, left, timeBetweenSteps);
 };
 
-StrobeyDancer.prototype = Object.create(slidyDancer.prototype);
+StrobeyDancer.prototype = Object.create(Dancer.prototype);
 StrobeyDancer.prototype.constructor = StrobeyDancer;
 
 StrobeyDancer.prototype.step = function() {
-  slidyDancer.prototype.step.call(this);
+  Dancer.prototype.step.call(this);
   this.$node.css({
     'border-color': getRandomColor(),
   });

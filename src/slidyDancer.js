@@ -10,9 +10,14 @@ slidyDancer.prototype.step = function(){
   this.$node.css( {
     'transition' : `transform ${this.timeBetweenSteps}ms`,
     'transform' :`translate(${getRandomScalar() * 90}px, ${getRandomScalar() * 90}px )`,
-    'border-color' : 'blue',
-    'border-radius': '0',
+    'border': '0'
     });
+  let $image = $('<img src="src/images/giphyDancer.gif">');
+  $image.css({
+    'height': '100px',
+    'width': 'auto'
+  })
+  this.$node.html($image);
 }
 
 function getRandomScalar(){

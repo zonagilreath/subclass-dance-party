@@ -29,8 +29,7 @@ $(document).ready(function() {
     );
     $('body').append(dancer.$node);
     dancer.$node.on('mouseover', function(event) {
-      // console.log('event');
-      // event.target.remove();
+      //adding mouseover behavior to make dancers run away from cursor
       let left = $(event.target).css('left');
       left = parseInt(left.slice(0, left.length - 2));
       $(event.target).css({
@@ -54,7 +53,5 @@ $(document).ready(function() {
   $('#line-up-button').on('click', function() {
     lineEmUpBaby();
   });
-  
-
 });
 
