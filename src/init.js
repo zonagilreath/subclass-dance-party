@@ -28,11 +28,33 @@ $(document).ready(function() {
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
+    dancer.$node.on('mouseover', function(event){
+      // console.log('event');
+      // event.target.remove();
+      let left = $(event.target).css('left');
+      left = parseInt(left.slice(0, left.length - 2));
+      $(event.target).css({
+        'left': `${left + (Math.random() * 300 - 150)}px`,
+        'transition': 'left 900ms'
+      });
+      
+      let top = $(event.target).css('top');
+      top = parseInt(top.slice(0, top.length - 2));
+      $(event.target).css({
+        'top': `${top + (Math.random() * 300 - 150)}px`,
+        'transition': 'top 900ms'
+      });
+    });
   });
+  
+  const lineEmUpBaby = function(){
+    $('.dancer').css({'left': '1px'});
+  }
   
   $('#line-up-button').on('click', function(){
     lineEmUpBaby();
-    // console.log('event!');
   });
+  
+
 });
 

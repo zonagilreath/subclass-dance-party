@@ -1,6 +1,6 @@
 var StrobeyDancer = function(top, left, timeBetweenSteps){
   Dancer.call(this, top, left, timeBetweenSteps);
-}
+};
 
 StrobeyDancer.prototype = Object.create(slidyDancer.prototype);
 StrobeyDancer.prototype.constructor = StrobeyDancer;
@@ -10,7 +10,7 @@ StrobeyDancer.prototype.step = function(){
   this.$node.css({
     'border-color': getRandomColor(),
   });
-}
+};
 
 
 function getRandomColor(){
@@ -18,4 +18,4 @@ function getRandomColor(){
   const green = Math.floor(Math.random() * 255);
   const blue = Math.floor(Math.random() * 255);
   return `rgb(${red}, ${green}, ${blue})`;
-}
+};
